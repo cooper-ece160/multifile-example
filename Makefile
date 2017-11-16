@@ -1,7 +1,6 @@
 all: main
+CXX=clang++
 
-CXXFLAGS+=-g -Wall
+CXXFLAGS+=-g -Wall -std=c++11
 LDLIBS+=-lstdc++
-main: Student.o main.o
-Student.o: Student.cpp
-main.o: main.cpp
+main: Student.cpp GradStudent.cpp main.cpp

@@ -1,10 +1,14 @@
-//#include "Student.h"
+#include "GradStudent.h"
 #include <string>
+#include <stdio.h>
 #include <iostream>
 
 int main() {
-	std::string s("Hi");
-	std::cout << s << std::endl;
-	//Student s(2033, "Julia");
+	Student s(2033, "Julia");
+	GradStudent g(2033, "Julia");
+	std::string studentString = s.toString();
+	//std::cout << studentString << std::endl;
+	printf("%s\n", studentString.c_str());
+	printf("%s\n", g.toString().c_str());
 	return 0;
 }

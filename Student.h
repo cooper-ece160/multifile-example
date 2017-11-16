@@ -10,5 +10,7 @@ class Student {
 	// data fields
 	int _year;
 	std::string _name;
+	
+	virtual std::string toString();
 };
 #endif
