@@ -5,9 +5,17 @@ GradStudent::GradStudent(int y, std::string n)
 
 GradStudent::~GradStudent() {}
 
+void GradStudent::addMajor(std::string m) {
+	_majors.push_back(m);
+}
+
 std::string GradStudent::toString() {
   std::string ret;
   ret = _name + " ";
   ret += std::to_string(_grad_year);
+  
+  for (auto m : _majors) {
+	 ret += ("\n" + m);
+  }
   return ret;
 }
